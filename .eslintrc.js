@@ -1,20 +1,20 @@
 module.exports = {
   root: true,
-
   env: {
     node: true,
+    'vue/setup-compiler-macros': true,
   },
-
   parserOptions: {
-    parser: "@typescript-eslint/parser",
+    parser: '@typescript-eslint/parser',
   },
-
-  rules: {},
-
+  rules: {
+    'vue/script-setup-uses-vars': 'error',
+  },
   extends: [
-    "plugin:vue/vue3-essential",
-    "@vue/prettier",
-    "eslint:recommended",
-    "@vue/typescript",
+    'plugin:vue/base',
+    'plugin:vue/vue3-essential',
+    '@vue/prettier',
+    'eslint:recommended',
+    '@vue/typescript',
   ],
-};
+}
